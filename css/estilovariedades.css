@@ -53,6 +53,10 @@
         "img7 img8 img6";
     }
 
+    .contenedor :hover{
+        transform: scale(1,2);
+    }
+
     .img{
         border: 2px solid black;
         margin:1%;
