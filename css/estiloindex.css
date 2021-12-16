@@ -1,0 +1,130 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    background-color: orange;
+}
+
+.contenedor{
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+    "header header header header"
+    "nav hornos hornos aside"
+    "nav masas masas aside"
+    "footer footer footer footer";
+}
+
+.border{
+    border: 1px solid black;
+}
+
+.logo{
+    padding: 0px;
+}
+
+header{
+    grid-area: header;
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li:hover{
+    background-color: rgb(180, 159, 159);
+}
+
+header li a{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px;
+    color: orange;
+}
+
+.contenedor li{
+    display: flex;
+    list-style: none;
+}
+
+nav{
+    grid-area: nav;
+    background-color: tan;
+}
+
+#hornos{
+    grid-area: hornos;
+    background-color: orangered;
+}
+
+#masas{
+    grid-area: masas;
+    background-color: orangered;
+}
+
+aside{
+    grid-area: aside;
+    background-color: seagreen;
+    text-align: center;
+}
+
+nav, #hornos, #masas, aside{
+    margin: 10px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+footer li{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px;
+    color: orange;
+}
+
+.footer{
+    display: flex;
+}
+
+.contenedor li{
+    display: flex;
+    list-style: none;
+}
+
+/* Media queries*/
+
+@media only screen and (max-width: 480px){
+        .contenedor{
+            grid-template-areas: 
+            "header"
+            "aside"
+            "hornos"
+            "masas"
+            "nav"
+            "footer";
+        }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 720px){
+    .contenedor{
+        grid-template-areas: 
+        "header header"
+        "nav hornos"
+        "nav masas"
+        "aside aside"
+        "footer footer";
+    }
+}

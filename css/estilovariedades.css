@@ -1,0 +1,174 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+/* inicio del header*/
+    
+    header{
+        background-color: brown;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .logo{
+        padding: 0px;
+    }
+
+    .menu{
+        display: flex;
+    }
+    
+    .menu li :hover{
+        background-color: rgb(180, 159, 159);
+    }
+
+    header li a{
+        font-size: 20px;
+        text-decoration: none;
+        padding: 20px;
+        color: orange;
+    }
+    
+    header li{
+        display: flex;
+        list-style: none;
+    }
+
+/*inicio de section*/
+
+    .contenedor{
+        display: grid;
+        background-color: orange;
+        text-align: center;
+        font-weight: bolder;
+        height: 100vh;
+        grid-template-areas:
+        "img1 img2 img3"
+        "img1 img4 img4"
+        "img5 img5 img6"
+        "img7 img8 img6";
+    }
+
+    .img{
+        border: 2px solid black;
+        margin:1%;
+        font-size: 30px;
+    }
+    
+    .img1{
+        grid-area: img1;
+        background-image: url(../images/pizza1.jpeg);
+        background-size: 220%;
+    }
+    
+    .img2{
+        grid-area: img2;
+        background-image: url(../images/pizza2.jpg);
+    }
+    
+    .img3{
+        grid-area: img3;
+        background-image: url(../images/pizza3.jpg);
+    }
+
+    .img4{
+        grid-area: img4;
+        background-image: url(../images/pizza4.jpg);
+        background-size: 85%;
+        background-position: center;
+    }
+
+    .img5{
+        grid-area: img5;
+        background-image: url(../images/pizza5.jpg);
+        background-size: 95%;
+        background-position: center;
+    }
+
+    .img6{
+        grid-area: img6;
+        background-image: url(../images/pizza6.jpg);
+        background-size: 100%;
+        background-position: center;
+    }
+
+    .img7{
+        grid-area: img7;
+        background-image: url(../images/pizza7.jpg);
+        background-size: 100%;
+    }
+
+    .img8{
+        grid-area: img8;
+        background-image: url(../images/pizza8.jpg);
+        background-size: 100%;
+    }
+
+/*inicio del nav*/
+
+    nav{
+        grid-area: nav;
+        background-color: cyan;
+    }
+    
+    /*inicio del footer*/
+
+    footer{
+        grid-area: footer;
+        background-color: brown;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    
+    footer li{
+        font-size: 20px;
+        list-style: none;
+        padding: 20px;
+        color: orange;
+    }
+    
+    .footer{
+        display: flex;
+    }
+    
+/* Media queries*/
+    
+    @media only screen and (max-width: 480px){
+            .contenedor{
+                grid-template-areas: 
+                "img1"
+                "img2"
+                "img3"
+                "img4"
+                "img5"
+                "img6"
+                "img7"
+                "img8";
+            }
+            .img{
+                background-size: 100%;
+                background-position:center;
+                width: 100%;
+            }
+    }
+    
+    @media only screen and (min-width: 481px) and (max-width: 720px){
+        .contenedor{
+            grid-template-areas: 
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8";
+        }
+        .img1{
+            background-size: 100%;
+        }
+        .img4{
+            background-size: 100%;
+        }
+    }
