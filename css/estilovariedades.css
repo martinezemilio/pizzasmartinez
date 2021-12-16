@@ -7,6 +7,7 @@
     
     header{
         background-color: brown;
+        background-image: linear-gradient(to right, orange, brown);
         display: flex;
         justify-content: space-between;
         align-content: center;
@@ -119,6 +120,7 @@
     footer{
         grid-area: footer;
         background-color: brown;
+        background-image: linear-gradient(to right, orange, brown);
         display: flex;
         justify-content: space-between;
         align-content: center;

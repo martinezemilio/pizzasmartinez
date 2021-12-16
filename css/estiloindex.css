@@ -28,6 +28,7 @@ body{
 header{
     grid-area: header;
     background-color: brown;
+    background-image: linear-gradient(to right, orange, brown);
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -62,11 +63,13 @@ nav{
 #hornos{
     grid-area: hornos;
     background-color: orangered;
+    background-image: linear-gradient(to left, orange, orangered);
 }
 
 #masas{
     grid-area: masas;
     background-color: orangered;
+    background-image: linear-gradient(to left, orange, orangered);
 }
 
 aside{
@@ -82,6 +85,7 @@ nav, #hornos, #masas, aside{
 footer{
     grid-area: footer;
     background-color: brown;
+    background-image: linear-gradient(to right, orange, brown);
     display: flex;
     justify-content: space-between;
     align-content: center;
